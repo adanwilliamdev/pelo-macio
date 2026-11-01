@@ -45,7 +45,8 @@ function iso(d: Date): string {
             <h1>Loja não encontrada</h1>
             <p class="suave">Confira o link ou fale com o pet shop. Pode ser que o agendamento online esteja desligado.</p>
           </section>
-        } @else if (loja(); as l) {
+        } @else if (loja()) {
+          @let l = loja()!;
           @if (passo() < 5) {
             <h1>Agende o banho e tosa do seu pet</h1>
             <ol class="passos" aria-label="Etapas">
